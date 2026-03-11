@@ -22,7 +22,7 @@
         <updated>2026-03-11T09:20:09-04:00</updated>
             <summary>
                 <![CDATA[
-                    I see too many Data Engineers manually writing the same SELECT, LEFT JOIN, and WHERE clauses for every new pipeline. If you’re copy-pasting SQL, you aren’t engineering; you’re transcribing. I’ve shifted my development workflow to a Metadata-Driven Approach using Jinja2. By decoupling the Business Logic&hellip;
+                    I see too many Data Engineers manually writing the same SELECT, LEFT JOIN, and WHERE clauses for every new pipeline. If you’re copy-pasting SQL, you aren’t engineering; you’re transcribing. I’ve shifted my development workflow to a Metadata-Driven Approach using Jinja2. By decoupling the Business Logic (JSON/YAML) from the Execution Logic&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -129,7 +129,7 @@ FROM
         <updated>2026-03-11T00:50:25-04:00</updated>
             <summary>
                 <![CDATA[
-                    How I Reclaimed 90GB of "System Data" on my Mac (The Data Engineer Way) 💻🚀 If you're a developer or data engineer on macOS, you know the "System Data" nightmare: a massive, mysterious 100GB+ bar that you can't click on or easily clean. I just&hellip;
+                    How I Reclaimed 90GB of "System Data" on my Mac (The Data Engineer Way) 💻🚀 If you're a developer or data engineer on macOS, you know the "System Data" nightmare: a massive, mysterious 100GB+ bar that you can't click on or easily clean. I just dropped my System Data from&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -183,7 +183,7 @@ FROM
         <updated>2026-03-11T00:49:41-04:00</updated>
             <summary>
                 <![CDATA[
-                    The job market is competitive. Most candidates are optimizing blindly. So I built a system that removes the blind spots. 🚀 CareerPilot AI analyzes how well your resume aligns with a specific job description — before you submit it. No guessing. No endless rewriting loops.
+                    The job market is competitive. Most candidates are optimizing blindly. So I built a system that removes the blind spots. 🚀 CareerPilot AI analyzes how well your resume aligns with a specific job description — before you submit it. No guessing. No endless rewriting loops. No hoping you pass ATS&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -208,7 +208,7 @@ FROM
         <updated>2026-03-11T00:48:39-04:00</updated>
             <summary>
                 <![CDATA[
-                    Since the release of OpenClaw, there has been significant buzz around using AI agents for basic administrative hygiene like email and calendar management. However, this narrow focus vastly underutilizes the platform's potential. To achieve maximum ROI, we should look at deploying OpenClaw on robust infrastructure&hellip;
+                    Since the release of OpenClaw, there has been significant buzz around using AI agents for basic administrative hygiene like email and calendar management. However, this narrow focus vastly underutilizes the platform's potential. To achieve maximum ROI, we should look at deploying OpenClaw on robust infrastructure (such as AWS) and equipping&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -251,7 +251,7 @@ FROM
         <updated>2025-11-27T20:34:10-05:00</updated>
             <summary>
                 <![CDATA[
-                    Semantic Search 💡 Understanding Search and Semantic Search 1. Traditional Search (Lexical Search) Search is the fundamental process of retrieving data or documents based on user input. Semantic Search is an advanced method that focuses on the meaning and intent behind the user’s query, moving&hellip;
+                    Semantic Search 💡 Understanding Search and Semantic Search 1. Traditional Search (Lexical Search) Search is the fundamental process of retrieving data or documents based on user input. Semantic Search is an advanced method that focuses on the meaning and intent behind the user’s query, moving beyond simple keywords. The model&hellip;
                 ]]>
             </summary>
         <content type="html">
