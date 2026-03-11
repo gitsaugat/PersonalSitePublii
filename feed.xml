@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">
+    <title>Saugat</title>
+    <link href="https://saugatsiwakoti.com.np/feed.xml" rel="self" />
+    <link href="https://saugatsiwakoti.com.np" />
+    <updated>2026-02-20T00:05:22-05:00</updated>
+    <author>
+        <name>Saugat Siwakoti</name>
+    </author>
+    <id>https://saugatsiwakoti.com.np</id>
+
+    <entry>
+        <title>Semantic Searching</title>
+        <author>
+            <name>Saugat Siwakoti</name>
+        </author>
+        <link href="https://saugatsiwakoti.com.np/semantic-searching.html"/>
+        <id>https://saugatsiwakoti.com.np/semantic-searching.html</id>
+
+        <updated>2025-11-27T20:34:10-05:00</updated>
+            <summary>
+                <![CDATA[
+                    Semantic Search 💡 Understanding Search and Semantic Search 1. Traditional Search (Lexical Search) Search is the fundamental process of retrieving data or documents based on user input. Semantic Search is an advanced method that focuses on the meaning and intent behind the user’s query, moving&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <h1 id="semantic-search">Semantic Search</h1>
+<h2 id="💡-understanding-search-and-semantic-search">💡 Understanding Search and Semantic Search</h2>
+<h2 id="1-traditional-search-lexical-search">1. Traditional Search (Lexical Search)</h2>
+<p><strong>Search</strong> is the fundamental process of retrieving data or documents based on user input.</p><ul>
+<li><strong>Focus:</strong> It relies purely on <strong>keyword matching</strong>.</li>
+<li><strong>Mechanism:</strong> It looks for exact or partial word matches between the user’s query and the documents.</li>
+<li><strong>Limitation:</strong> It struggles with <strong>synonyms</strong> and <strong>context</strong>, often resulting in less relevant results if the exact keywords aren’t present.</li>
+</ul>
+<hr>
+<h2 id="2-semantic-search-an-advanced-approach">2. Semantic Search: An Advanced Approach</h2>
+<p><strong>Semantic Search</strong> is an advanced method that focuses on the <strong>meaning</strong> and <strong>intent</strong> behind the user’s query, moving beyond simple keywords.</p><ul>
+<li><strong>Mechanism:</strong> It relates the <strong>keyword + context</strong> of the query to the data.</li>
+<li><strong>Vector Space:</strong> Semantic search operates entirely in a <strong>vector space</strong>, where words and sentences are converted into dense numerical representations called <strong>embeddings</strong>.</li>
+<li>Vectors that are directionally close are considered <strong>semantically similar</strong>.</li>
+<li><strong>LLM Integration:</strong> It is frequently used in <strong>Large Language Models (LLMs)</strong> to provide more accurate and contextually relevant responses.</li>
+<li><strong>Retrieval:</strong> It primarily uses techniques like <strong>k-Nearest Neighbor (kNN)</strong> to find the data vectors closest to the query vector.</li>
+</ul>
+<hr>
+<h2 id="3-determining-the-best-match-cosine-similarity">3. Determining the Best Match: Cosine Similarity</h2>
+<p>The model determines the best match by calculating the <strong>Cosine Similarity Score</strong> between the query vector</p><h3 id="ranking-the-results">Ranking the Results</h3>
+<p>The <strong>highest score</strong> (the one closest to <strong>+1.0</strong>) indicates the best match.</p><table>
+<thead>
+<tr>
+<th>Corpus</th>
+<th>Similarity Score</th>
+<th>Interpretation</th>
+<th>Match Quality</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>C</strong></td>
+<td><strong>0.65</strong></td>
+<td>Strong positive alignment.</td>
+<td><strong>Best Match</strong> (Closest to 1.0)</td>
+</tr>
+<tr>
+<td>A</td>
+<td>0.25</td>
+<td>Weak positive alignment.</td>
+<td>Low Similarity</td>
+</tr>
+<tr>
+<td>B</td>
+<td>-0.25</td>
+<td>Negative alignment.</td>
+<td>Dissimilar</td>
+</tr>
+<tr>
+<td>D</td>
+<td>-0.787</td>
+<td>Strong negative alignment.</td>
+<td>Furthest Match (Closest to -1.0)</td>
+</tr>
+</tbody></table>
+<p>The final ranking ensures that <strong>Corpus C</strong> is retrieved as the most relevant result, as its meaning is most closely aligned with the query’s intent.</p>
+            ]]>
+        </content>
+    </entry>
+</feed>
