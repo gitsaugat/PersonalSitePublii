@@ -3,7 +3,7 @@
     <title>Saugat</title>
     <link href="https://saugatsiwakoti.com.np/feed.xml" rel="self" />
     <link href="https://saugatsiwakoti.com.np" />
-    <updated>2026-03-11T09:26:56-04:00</updated>
+    <updated>2026-03-11T09:27:23-04:00</updated>
     <author>
         <name>Saugat Siwakoti</name>
     </author>
@@ -38,7 +38,7 @@
 <li><strong>Cost Governance:</strong> By explicitly defining columns in the metadata, I prevent “silent” cost explosions in Snowflake or BigQuery that come from lazy <code>SELECT *</code> statements.</li>
 <li><strong>Scalability:</strong> This is the “internal” logic that powers tools like <strong>dbt</strong>. Understanding these abstractions is the difference between a Junior dev and a Senior Architect.</li>
 </ol>
-<p>If you want to build systems that don’t break every time a schema changes, start thinking in <strong>templates</strong>, not just scripts.Check my blog to see the implementation</p><h3 id="the-implementation"><strong>The Implementation</strong></h3>
+<p>If you want to build systems that don’t break every time a schema changes, start thinking in <strong>templates</strong>, not just scripts.</p><h3 id="the-implementation"><strong>The Implementation</strong></h3>
 <h5 id="install-jinja-2"><em>Install Jinja 2</em></h5>
 <pre><code>pip install jinja2
 </code></pre>
