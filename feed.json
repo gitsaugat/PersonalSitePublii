@@ -19,9 +19,10 @@
                 "name": "Saugat Siwakoti"
             },
             "tags": [
+                   "Systems &amp; Infrastructure"
             ],
             "date_published": "2026-03-11T00:50:25-04:00",
-            "date_modified": "2026-03-11T00:50:25-04:00"
+            "date_modified": "2026-03-11T01:04:40-04:00"
         },
         {
             "id": "https://saugatsiwakoti.com.np/careerpilot-ai.html",
@@ -33,9 +34,11 @@
                 "name": "Saugat Siwakoti"
             },
             "tags": [
+                   "Artificial Intelligence",
+                   "AI Engineering"
             ],
             "date_published": "2026-03-11T00:49:41-04:00",
-            "date_modified": "2026-03-11T00:49:41-04:00"
+            "date_modified": "2026-03-11T01:04:57-04:00"
         },
         {
             "id": "https://saugatsiwakoti.com.np/opencalw.html",
@@ -47,9 +50,12 @@
                 "name": "Saugat Siwakoti"
             },
             "tags": [
+                   "Systems &amp; Infrastructure",
+                   "Artificial Intelligence",
+                   "AI Engineering"
             ],
             "date_published": "2026-03-11T00:48:39-04:00",
-            "date_modified": "2026-03-11T00:48:39-04:00"
+            "date_modified": "2026-03-11T01:05:13-04:00"
         },
         {
             "id": "https://saugatsiwakoti.com.np/semantic-searching.html",
@@ -61,9 +67,10 @@
                 "name": "Saugat Siwakoti"
             },
             "tags": [
+                   "Machine Learning"
             ],
             "date_published": "2025-11-27T20:34:10-05:00",
-            "date_modified": "2026-02-20T00:05:22-05:00"
+            "date_modified": "2026-03-11T01:05:25-04:00"
         }
     ]
 }

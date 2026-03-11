@@ -3,7 +3,7 @@
     <title>Saugat</title>
     <link href="https://saugatsiwakoti.com.np/feed.xml" rel="self" />
     <link href="https://saugatsiwakoti.com.np" />
-    <updated>2026-03-11T00:50:25-04:00</updated>
+    <updated>2026-03-11T01:05:25-04:00</updated>
     <author>
         <name>Saugat Siwakoti</name>
     </author>
@@ -16,6 +16,7 @@
         </author>
         <link href="https://saugatsiwakoti.com.np/reclaim-your-mac-storage.html"/>
         <id>https://saugatsiwakoti.com.np/reclaim-your-mac-storage.html</id>
+            <category term="Systems &amp; Infrastructure"/>
 
         <updated>2026-03-11T00:50:25-04:00</updated>
             <summary>
@@ -68,6 +69,8 @@
         </author>
         <link href="https://saugatsiwakoti.com.np/careerpilot-ai.html"/>
         <id>https://saugatsiwakoti.com.np/careerpilot-ai.html</id>
+            <category term="Artificial Intelligence"/>
+            <category term="AI Engineering"/>
 
         <updated>2026-03-11T00:49:41-04:00</updated>
             <summary>
@@ -90,6 +93,9 @@
         </author>
         <link href="https://saugatsiwakoti.com.np/opencalw.html"/>
         <id>https://saugatsiwakoti.com.np/opencalw.html</id>
+            <category term="Systems &amp; Infrastructure"/>
+            <category term="Artificial Intelligence"/>
+            <category term="AI Engineering"/>
 
         <updated>2026-03-11T00:48:39-04:00</updated>
             <summary>
@@ -132,6 +138,7 @@
         </author>
         <link href="https://saugatsiwakoti.com.np/semantic-searching.html"/>
         <id>https://saugatsiwakoti.com.np/semantic-searching.html</id>
+            <category term="Machine Learning"/>
 
         <updated>2025-11-27T20:34:10-05:00</updated>
             <summary>
