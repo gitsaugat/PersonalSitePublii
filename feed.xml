@@ -3,12 +3,120 @@
     <title>Saugat</title>
     <link href="https://saugatsiwakoti.com.np/feed.xml" rel="self" />
     <link href="https://saugatsiwakoti.com.np" />
-    <updated>2026-03-11T01:05:25-04:00</updated>
+    <updated>2026-03-11T09:26:56-04:00</updated>
     <author>
         <name>Saugat Siwakoti</name>
     </author>
     <id>https://saugatsiwakoti.com.np</id>
 
+    <entry>
+        <title>Stop Writing Hardcoded SQL. Build Metadata-Driven Engines.</title>
+        <author>
+            <name>Saugat Siwakoti</name>
+        </author>
+        <link href="https://saugatsiwakoti.com.np/build-metadata-driven-sql-engines.html"/>
+        <id>https://saugatsiwakoti.com.np/build-metadata-driven-sql-engines.html</id>
+            <category term="Data Engineering"/>
+            <category term="Data Analytics"/>
+
+        <updated>2026-03-11T09:20:09-04:00</updated>
+            <summary>
+                <![CDATA[
+                    I see too many Data Engineers manually writing the same SELECT, LEFT JOIN, and WHERE clauses for every new pipeline. If you’re copy-pasting SQL, you aren’t engineering; you’re transcribing. I’ve shifted my development workflow to a Metadata-Driven Approach using Jinja2. By decoupling the Business Logic&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>I see too many Data Engineers manually writing the same <code>SELECT</code>, <code>LEFT JOIN</code>, and <code>WHERE</code> clauses for every new pipeline. If you’re copy-pasting SQL, you aren’t engineering; you’re transcribing.</p><p>I’ve shifted my development workflow to a <strong>Metadata-Driven Approach</strong> using <strong>Jinja2</strong>.</p><p>By decoupling the <strong>Business Logic (JSON/YAML)</strong> from the <strong>Execution Logic (SQL Template)</strong>, I’ve turned a repetitive chore into a scalable, declarative engine.</p><h3 id="the-framework-separation-of-concerns"><strong>The Framework: Separation of Concerns</strong></h3>
+<p>Instead of a static 200-line SQL file, I define the “What” in a configuration and let the Jinja template handle the “How.”</p><p><strong>The Logic:</strong></p><ul>
+<li><strong>The Config:</strong> Defines tables, join keys, and specific columns. (Notice: No <code>SELECT *</code>—I optimize for I/O and compute cost).</li>
+<li><strong>The Template:</strong> A reusable Jinja2 string that enforces engineering standards across every query it generates.</li>
+</ul>
+<h3 id="why-the-top-1-of-engineers-build-this-way"><strong>Why the Top 1% of Engineers Build This Way:</strong></h3>
+<ol>
+<li><strong>Zero Redundancy (DRY):</strong> If I need to change a join pattern or add a global filter, I update the template <strong>once</strong>. It propagates to every pipeline instantly.</li>
+<li><strong>Cost Governance:</strong> By explicitly defining columns in the metadata, I prevent “silent” cost explosions in Snowflake or BigQuery that come from lazy <code>SELECT *</code> statements.</li>
+<li><strong>Scalability:</strong> This is the “internal” logic that powers tools like <strong>dbt</strong>. Understanding these abstractions is the difference between a Junior dev and a Senior Architect.</li>
+</ol>
+<p>If you want to build systems that don’t break every time a schema changes, start thinking in <strong>templates</strong>, not just scripts.Check my blog to see the implementation</p><h3 id="the-implementation"><strong>The Implementation</strong></h3>
+<h5 id="install-jinja-2"><em>Install Jinja 2</em></h5>
+<pre><code>pip install jinja2
+</code></pre>
+<h5 id="setup-configuration"><em>Setup Configuration</em></h5>
+<pre><code>jinja_config = [
+    {
+        &quot;table&quot;:&quot;project.bronze.table1 table1&quot;,
+        &quot;select&quot;:&quot;table1.*&quot;,
+        &quot;where&quot;:&quot;&quot;
+    },
+    {
+        &quot;table&quot;:&quot;project.bronze.table2 table2&quot;,
+        &quot;select&quot;:&quot;table2.col1,col2,col3&quot;,
+        &quot;where&quot;:&quot;&quot;,
+        &quot;on&quot;:&quot;table1.col = table2.col&quot;
+    },
+    {
+        &quot;table&quot;:&quot;project.bronze.table3 table3&quot;,
+        &quot;select&quot;:&quot;table3.col1,col2,col3,col4&quot;,
+        &quot;where&quot;:&quot;&quot;,
+        &quot;on&quot;:&quot;table1.col = table3.col&quot;
+    }
+]
+</code></pre>
+<h5 id="generate-and-render"><em>Generate And Render</em></h5>
+<pre><code>jinja_str = &quot;&quot;&quot;
+    SELECT 
+        {% for config in configs %}
+            {% if loop.last %}
+                {{config.select}}
+            {% else %}
+                {{config.select}},
+            {%endif%}
+        {%endfor%}
+    FROM 
+        {%for config in configs%}
+            {%if loop.first%}
+                {{config.table}}
+            {%endif%}
+            {%if not loop.first%}
+                LEFT JOIN {{config.table}} ON {{config.on}}
+            {%endif%}
+        {%endfor%}
+        
+    {%for config in configs%}
+        {%if loop.first%}
+             {%if config.where != &quot;&quot;%} 
+                WHERE
+             {%endif%}
+        {%endif%}
+        {%if not loop.last%}
+            {%if config.where != &quot;&quot; %}
+                {{config.where}}
+                AND 
+            {%endif%}
+        {%endif%}
+    {%endfor%}
+&quot;&quot;&quot;
+
+render = jinja2.Template(jinja_str).render(configs=jinja_config)
+print(render)
+</code></pre>
+<h5 id="final-product"><em>Final Product</em></h5>
+<pre><code>SELECT 
+          table1.*,
+                table2.col1,col2,col3,
+                table3.col1,col2,col3,col4
+FROM 
+                project.bronze.table1 table1
+                LEFT JOIN project.bronze.table2 table2 ON table1.col = table2.col
+                LEFT JOIN project.bronze.table3 table3 ON table1.col = table3.col
+
+# Note : This query was not hardcoded , it was generated by the confuguration and rendering process. 
+</code></pre>
+
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Reclaim Your Mac Storage</title>
         <author>
