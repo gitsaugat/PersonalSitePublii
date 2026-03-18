@@ -3,7 +3,7 @@
     <title>Saugat</title>
     <link href="https://saugatsiwakoti.com.np/feed.xml" rel="self" />
     <link href="https://saugatsiwakoti.com.np" />
-    <updated>2026-03-18T17:23:21-04:00</updated>
+    <updated>2026-03-18T17:25:28-04:00</updated>
     <author>
         <name>Saugat Siwakoti</name>
     </author>
@@ -24,7 +24,7 @@
         <updated>2026-03-18T13:20:55-04:00</updated>
             <summary>
                 <![CDATA[
-                    Medallion Architecture Imagine a startup in its early stages, relying on a few custom Python ETL pipelines to move and process data. At this point, the system works data is manageable, and the pipelines are relatively simple to maintain. However, as the business grows, data begins to flow in from&hellip;
+                    Medallion Architecture Imagine a startup in its early stages, relying on a few custom Python ETL pipelines to move and process data. At this point, the system works&nbsp; and the data is manageable, and the pipelines are relatively simple to maintain. However, as the business grows, data begins to flow&hellip;
                 ]]>
             </summary>
         <content type="html">
@@ -36,7 +36,7 @@
     </figure>
 
   <p>
-    Imagine a startup in its early stages, relying on a few custom Python ETL pipelines to move and process data. At this point, the system works data is manageable, and the pipelines are relatively simple to maintain.<br><br>However, as the business grows, data begins to flow in from multiple sources applications, third-party tools, and customer interactions. What once worked efficiently starts to become increasingly difficult to manage.<br><br>The growing complexity places strain on these custom pipelines. Maintenance becomes time consuming, changes introduce unexpected failures, and the system gradually becomes fragile.<br><br>Over time, pipelines begin to break, leading to inconsistent data across teams. Different departments start working with conflicting numbers, trust in data declines, and the overall system becomes difficult to scale or sustain.
+    Imagine a startup in its early stages, relying on a few custom Python ETL pipelines to move and process data. At this point, the system works&nbsp; and the data is manageable, and the pipelines are relatively simple to maintain.<br><br>However, as the business grows, data begins to flow in from multiple sources --&nbsp; applications, third-party tools, and customer interactions. What once worked efficiently starts to become increasingly difficult to manage.<br><br>The growing complexity places strain on these custom pipelines. Maintenance becomes time consuming, changes introduce unexpected failures, and the system gradually becomes fragile.<br><br>Over time, pipelines begin to break, leading to inconsistent data across teams. Different departments start working with conflicting numbers, trust in data declines, and the overall system becomes difficult to scale or sustain.
   </p>
 
   <p>
